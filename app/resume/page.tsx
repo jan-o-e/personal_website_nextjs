@@ -12,9 +12,10 @@ export default function Page() {
       if (!latestResume) {
         return currentResume
       }
-      else if (currentResume.date > latestResume.date)
+      else {
       // If the currentResume doesn't have a newer date, keep the latestResume
         return latestResume
+      }
     }, null) as Resume
     const mainContent = coreContent(fetch_resume)
 
