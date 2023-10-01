@@ -21,7 +21,7 @@ export default function Page() {
 
   return (
     <>
-      <ResumeSimple content={mainContent}>
+      <ResumeSimple content={mainContent} children={undefined}>
         <MDXLayoutRenderer code={fetch_resume.body.code} />
       </ResumeSimple>
     </>
