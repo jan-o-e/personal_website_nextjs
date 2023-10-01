@@ -7,15 +7,16 @@ import { genPageMetadata } from 'app/seo'
 export const metadata = genPageMetadata({ title: 'Curriculum Vitae' })
 
 export default function Page() {
-const fetch_resume = allResumes.reduce((latestResume, currentResume) => {
-    // If latestResume is null (initial iteration) or the current resume has a newer date, update latestResume
-    if (!latestResume || currentResume.date > latestResume.date) {
-      return currentResume
-    }
-    // If the currentResume doesn't have a newer date, keep the latestResume
-    return latestResume
-  }, null) as Resume
-  const mainContent = coreContent(fetch_resume)
+  const fetch_resume = allResumes.reduce((latestResume, currentResume) => {
+      // If latestResume is null (initial iteration) or the current resume has a newer date, update latestResume
+      if (!latestResume) {
+        return currentResume
+      }
+      else if (currentResume.date > latestResume.date)
+      // If the currentResume doesn't have a newer date, keep the latestResume
+        return latestResume
+    }, null) as Resume
+    const mainContent = coreContent(fetch_resume)
 
   return (
     <>
