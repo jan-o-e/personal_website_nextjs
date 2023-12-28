@@ -9,7 +9,7 @@ export default async function Tweets() {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {tweets.map((tweet) => (
           <div key={tweet} className="mb-4 h-custom-height overflow-y-auto">
             <Tweet id={tweet} />
