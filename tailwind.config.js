@@ -1,10 +1,11 @@
 // @ts-check
-const { fontFamily } = require('tailwindcss/defaultTheme')
+//const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 /** @type {import("tailwindcss/types").Config } */
 module.exports = {
   content: [
+    './css/**/*.css',
     './node_modules/pliny/**/*.js',
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,tsx}',
@@ -25,7 +26,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        mono: ['var(--font-space-grotesk)', ...fontFamily.sans],
+        sans: ['ui-monosapce','monospace','SFMono-Regular'],
       },
       colors: {
         primary: colors.purple,
