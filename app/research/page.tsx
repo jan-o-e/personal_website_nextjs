@@ -14,7 +14,7 @@ export default function ResearchProjects() {
             Research
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            A showcase of some research interests, my publications are available on <a className="text-gray-500 transition hover:text-primary-500" href={siteMetadata.googlescholar}> Google Scholar</a>
+            A showcase of some physics research, more details can be found on <a className="text-gray-500 transition hover:text-primary-500" href={siteMetadata.googlescholar}> Google Scholar</a>
           </p> 
         </div>
         <div className="container py-12">
