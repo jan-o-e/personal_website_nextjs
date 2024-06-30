@@ -17,7 +17,7 @@ export default function InterestsPage() {
             A showcase of some physics research can be found on my  <a href="/research" style={{ color: '#800080' }}>Research Page</a>. 
           </p> 
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          I am also interested in decentralised networks, blockchains and open source software, hoping to keep growing the library of scientific software tools. Some ideas on the governance of decentralised autonomous organisations can be found <a href="https://blog.tally.xyz/dao-governance-challenges-ideas-and-tools-1504fd82be24" style={{ color: '#800080' }}>Here</a>.
+          I am also interested in blockchains and open source software, hoping to keep growing the library of scientific software tools. Some ideas on the governance of decentralised autonomous organisations can be found <a href="https://blog.tally.xyz/dao-governance-challenges-ideas-and-tools-1504fd82be24" style={{ color: '#800080' }}>Here</a>.
           </p>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
            I have partaken in a number of hackathons and some of my favorite projects are showcased on my <a href="/projects" style={{ color: '#800080' }}>Projects Page</a>.
