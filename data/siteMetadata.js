@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: '',
   author: 'Jan Ole Ernst',
-  headerTitle: 'J.O.E.',
+  headerTitle: 'Home',
   description: 'Welcome to Jan Ole Ernst´s website',
   language: 'en-uk',
   theme: 'system', // system, dark or light
