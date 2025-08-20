@@ -9,7 +9,7 @@
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
-    "build": "NODE_OPTIONS='--experimental-json-modules' next build && NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
+    "build": "NODE_OPTIONS='--experimental-json-modules --no-warnings' next build && NODE_OPTIONS='--experimental-json-modules --no-warnings' node ./scripts/postbuild.mjs",
     "build:local": "./build.sh",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
@@ -80,6 +80,11 @@
     "@opentelemetry/sdk-trace-base": "^1.26.0",
     "@opentelemetry/sdk-trace-node": "^1.26.0",
     "@opentelemetry/semantic-conventions": "^1.27.0"
+  },
+  "overrides": {
+    "next-contentlayer": {
+      "next": "$next"
+    }
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
