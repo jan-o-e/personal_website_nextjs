@@ -55,7 +55,7 @@ const securityHeaders = [
 ]
 
 /**
- * @type {import('next/dist/next-server/server/config').NextConfig}
+ * @type {import('next').NextConfig}
  **/
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
@@ -67,9 +67,6 @@ module.exports = () => {
     },
     images: {
       domains: ['picsum.photos'],
-    },
-    experimental: {
-      appDir: true,
     },
     async headers() {
       return [
