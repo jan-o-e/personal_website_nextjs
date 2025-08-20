@@ -1,4 +1,4 @@
-import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import { writeFileSync } from 'fs'
 import readingTime from 'reading-time'
 import GithubSlugger from 'github-slugger'
@@ -25,7 +25,7 @@ import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
 
-const computedFields: ComputedFields = {
+const computedFields = {
   readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
   slug: {
     type: 'string',
@@ -46,7 +46,7 @@ const computedFields: ComputedFields = {
  * Count the occurrences of all tags across blog posts and write to json file
  */
 function createTagCount(allBlogs) {
-  const tagCount: Record<string, number> = {}
+  const tagCount = {}
   const slugger = new GithubSlugger()
   allBlogs.forEach((file) => {
     if (file.tags && (!isProduction || file.draft !== true)) {
@@ -145,6 +145,7 @@ export const Resume = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog, Authors, Resume],
+  // @ts-ignore - Temporary fix for type conflicts between contentlayer and unified packages
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
